@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os, sys
 import json
 import pandas as pd
@@ -6,11 +8,12 @@ from time import perf_counter
 start = perf_counter()
 
 if sys.platform.startswith('linux'):
-    os.chdir(('/'.join(os.path.dirname(__file__).split('/')[:-2])))
-
+    os.chdir(os.path.join(os.path.dirname(__file__), 'imdb_top250Movies'))
+print(os.getcwd())
 
 
 os.system('scrapy crawl imdbMovies -O MovieList-Generated.json')
+
 with open('MovieList-Generated.json', 'r') as j:
     json_obj = json.load(j)
 
