@@ -9,8 +9,8 @@ start = perf_counter()
 
 if sys.platform.startswith('linux'):
     os.chdir(os.path.join(os.path.dirname(__file__), 'imdb_top250Movies'))
-print(os.getcwd())
-
+else:
+    os.chdir(os.path.join(os.path.dirname(__file__), 'imdb_top250Movies'))
 
 os.system('scrapy crawl imdbMovies -O MovieList-Generated.json')
 
