@@ -6,3 +6,5 @@
 > for downloading 250 movies details from different pages BS4 took around 15mins to complete the process
 
 > But the in Scrapy, it took less than a minute to complete the whole process.
+
+> In this project we are using scrapy for data extraction, json for data storing and pandas for data cleaning
